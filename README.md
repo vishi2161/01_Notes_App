@@ -28,8 +28,7 @@ This project demonstrates:-
    or
     ```bash
    mvn clean install
-   java -jar target/
-   notes-app-0.0.1-SNAPSHOT.jar
+   java -jar target/notes-app-0.0.1-SNAPSHOT.jar
     ```
 
 3. Access the app:
