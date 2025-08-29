@@ -14,22 +14,21 @@ public class NoteController {
     @Autowired
     private NoteRepository noteRepository;
 
-//    read all notes
     @GetMapping
     public List<Note> getAllNotes(){
         return noteRepository.findAll();
     }
-//    read notes by id
+
     @GetMapping("/{id}")
     public Note getNoteById(@PathVariable Long id){
         return noteRepository.findById(id).orElse(null);
     }
-//    create a note
+
     @PostMapping
     public Note createNote(@RequestBody Note note){
         return noteRepository.save(note);
     }
-//    update a note
+
     @PutMapping("/{id}")
     public Note updateNote(@PathVariable Long id, @RequestBody Note updatedNotes){
         Note note = noteRepository.findById(id).orElse(null);
@@ -40,7 +39,7 @@ public class NoteController {
         }
         return null;
     }
-//    delete a note
+
     @DeleteMapping("/{id}")
     public String deleteNote(@PathVariable Long id){
         noteRepository.deleteById(id);

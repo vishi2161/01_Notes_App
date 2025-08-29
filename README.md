@@ -62,4 +62,4 @@ This project demonstrates:-
 - DELETE/notes/{id} --> delete note
 
 ## Author
-Virat
+Ekta
